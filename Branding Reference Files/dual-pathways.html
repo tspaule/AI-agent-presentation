@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asking Better Questions - AI from the Inside</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+    }
+
+    .graphic {
+      width: 680px;
+      background: #ffffff;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .header {
+      padding: 40px 40px 32px;
+      text-align: center;
+      position: relative;
+    }
+
+    .header h1 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1.7rem;
+      font-weight: 400;
+      color: #0f0f0f;
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
+
+    .header-line {
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #ec4899 0%, #f472b6 50%, #ec4899 100%);
+      border-radius: 2px;
+    }
+
+    .content {
+      padding: 32px 40px 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .question-box {
+      padding: 24px 28px;
+      border-radius: 6px;
+      background: #f8f8f8;
+      border: 1px solid #e0e0e0;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .question-label {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #888888;
+      margin-bottom: 10px;
+    }
+
+    .question-text {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1.2rem;
+      line-height: 1.4;
+      color: #0f0f0f;
+      font-style: italic;
+    }
+
+    .arrows-container {
+      display: flex;
+      justify-content: center;
+      gap: 120px;
+      margin-bottom: 20px;
+    }
+
+    .arrow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .arrow-line {
+      width: 2px;
+      height: 20px;
+    }
+
+    .arrow-line.grey {
+      background: #888888;
+    }
+
+    .arrow-line.pink {
+      background: #ec4899;
+    }
+
+    .arrow-head {
+      width: 0;
+      height: 0;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+    }
+
+    .arrow-head.grey {
+      border-top: 8px solid #888888;
+    }
+
+    .arrow-head.pink {
+      border-top: 8px solid #ec4899;
+    }
+
+    .pathways {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .pathway {
+      border-radius: 6px;
+      background: #ffffff;
+      overflow: hidden;
+    }
+
+    .pathway.technical {
+      border: 1px solid #d0d0d0;
+      border-left: 4px solid #888888;
+    }
+
+    .pathway.deeper {
+      border: 1px solid #ec4899;
+      border-left: 4px solid #ec4899;
+    }
+
+    .pathway-header {
+      padding: 16px 20px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .pathway.deeper .pathway-header {
+      border-bottom-color: rgba(236, 72, 153, 0.2);
+    }
+
+    .pathway-label {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .pathway.technical .pathway-label {
+      color: #888888;
+    }
+
+    .pathway.deeper .pathway-label {
+      color: #ec4899;
+    }
+
+    .pathway-subtitle {
+      font-size: 0.8rem;
+      color: #666666;
+    }
+
+    .pathway-content {
+      padding: 20px;
+    }
+
+    .item-list {
+      list-style: none;
+    }
+
+    .item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 0;
+    }
+
+    .item:not(:last-child) {
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .pathway.deeper .item:not(:last-child) {
+      border-bottom-color: rgba(236, 72, 153, 0.1);
+    }
+
+    .item-bullet {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      margin-top: 6px;
+      flex-shrink: 0;
+    }
+
+    .pathway.technical .item-bullet {
+      background: #cccccc;
+    }
+
+    .pathway.deeper .item-bullet {
+      background: #ec4899;
+    }
+
+    .item-text {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #333333;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 28px 40px 36px;
+      background: #ffffff;
+      position: relative;
+    }
+
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #ec4899 0%, #f472b6 50%, #ec4899 100%);
+    }
+
+    .footer p {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #555555;
+      font-style: italic;
+    }
+
+    .footer p strong {
+      color: #ec4899;
+      font-weight: 400;
+    }
+  </style>
+</head>
+<body>
+  <div class="graphic">
+    <div class="header">
+      <h1>Two Ways to Respond</h1>
+      <div class="header-line"></div>
+    </div>
+
+    <div class="content">
+      <div class="question-box">
+        <div class="question-label">Client asks</div>
+        <p class="question-text">"Should I switch from sole trader to a company structure?"</p>
+      </div>
+
+      <div class="arrows-container">
+        <div class="arrow">
+          <div class="arrow-line grey"></div>
+          <div class="arrow-head grey"></div>
+        </div>
+        <div class="arrow">
+          <div class="arrow-line pink"></div>
+          <div class="arrow-head pink"></div>
+        </div>
+      </div>
+
+      <div class="pathways">
+        <div class="pathway technical">
+          <div class="pathway-header">
+            <div class="pathway-label">Technical Answer</div>
+            <div class="pathway-subtitle">Obvious</div>
+          </div>
+          <div class="pathway-content">
+            <ul class="item-list">
+              <li class="item">
+                <span class="item-bullet"></span>
+                <span class="item-text">Company tax rate is 25%</span>
+              </li>
+              <li class="item">
+                <span class="item-bullet"></span>
+                <span class="item-text">Setup costs around $1,500</span>
+              </li>
+              <li class="item">
+                <span class="item-bullet"></span>
+                <span class="item-text">Annual ASIC fees apply</span>
+              </li>
+              <li class="item">
+                <span class="item-bullet"></span>
+                <span class="item-text">Directors have legal obligations</span>
+              </li>
+              <li class="item">
+                <span class="item-bullet"></span>
+                <span class="item-text">Limited liability protection</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pathway deeper">
+          <div class="pathway-header">
+            <div class="pathway-label">Questions That Matter</div>
+            <div class="pathway-subtitle">Non-obvious</div>
+          </div>
+          <div class="pathway-content">
+            <ul class="item-list">
+              <li class="item">
+                <span class="item-bullet"></span>
+                <span class="item-text">What's prompting this question now?</span>
+              </li>
+              <li class="item">
+                <span class="item-bullet"></span>
+                <span class="item-text">Tax, liability, or something else?</span>
+              </li>
+              <li class="item">
+                <span class="item-bullet"></span>
+                <span class="item-text">Planning to bring on investors?</span>
+              </li>
+              <li class="item">
+                <span class="item-bullet"></span>
+                <span class="item-text">What does the business look like in 3 years?</span>
+              </li>
+              <li class="item">
+                <span class="item-bullet"></span>
+                <span class="item-text">Does this structure still fit then?</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p><strong>One path gives information.</strong> The other creates clarity.</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The AI Productivity Divide - AI from the Inside</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+    }
+
+    .graphic {
+      width: 680px;
+      background: #ffffff;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .header {
+      padding: 40px 40px 32px;
+      text-align: center;
+      position: relative;
+    }
+
+    .header h1 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: #0f0f0f;
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
+
+    .header-line {
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #ec4899 0%, #f472b6 50%, #ec4899 100%);
+      border-radius: 2px;
+    }
+
+    .content {
+      padding: 32px 40px 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .starting-point {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .start-box {
+      display: inline-block;
+      padding: 16px 32px;
+      background: #f8f8f8;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+    }
+
+    .start-label {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #888888;
+      margin-bottom: 4px;
+    }
+
+    .start-text {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #0f0f0f;
+      margin-bottom: 4px;
+    }
+
+    .start-subtext {
+      font-size: 0.85rem;
+      color: #666666;
+      font-style: italic;
+    }
+
+    .split-arrows {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+      position: relative;
+      height: 60px;
+    }
+
+    .arrow-container {
+      display: flex;
+      justify-content: center;
+      gap: 200px;
+      width: 100%;
+    }
+
+    .arrow-single {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .arrow-line-down {
+      width: 2px;
+      height: 44px;
+    }
+
+    .arrow-line-down.grey {
+      background: #888888;
+    }
+
+    .arrow-line-down.pink {
+      background: #ec4899;
+    }
+
+    .arrow-head-small {
+      width: 0;
+      height: 0;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+    }
+
+    .arrow-head-small.grey {
+      border-top: 8px solid #888888;
+    }
+
+    .arrow-head-small.pink {
+      border-top: 8px solid #ec4899;
+    }
+
+    .paths-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .path {
+      border-radius: 6px;
+      background: #ffffff;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .path.basic {
+      border: 1px solid #d0d0d0;
+      border-left: 4px solid #888888;
+    }
+
+    .path.power {
+      border: 1px solid #ec4899;
+      border-left: 4px solid #ec4899;
+    }
+
+    .path-header {
+      padding: 18px 20px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .path.power .path-header {
+      border-bottom-color: rgba(236, 72, 153, 0.2);
+    }
+
+    .path-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .path.basic .path-label {
+      color: #888888;
+    }
+
+    .path.power .path-label {
+      color: #ec4899;
+    }
+
+    .path-content {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .path-items {
+      flex: 1;
+    }
+
+    .path-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 0;
+    }
+
+    .path-item:not(:last-child) {
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .path.power .path-item:not(:last-child) {
+      border-bottom-color: rgba(236, 72, 153, 0.1);
+    }
+
+    .path-bullet {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      margin-top: 6px;
+      flex-shrink: 0;
+    }
+
+    .path.basic .path-bullet {
+      background: #cccccc;
+    }
+
+    .path.power .path-bullet {
+      background: #ec4899;
+    }
+
+    .path-text {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #333333;
+    }
+
+    .path-outcome {
+      margin-top: auto;
+      padding: 14px 16px;
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    .path.basic .path-outcome {
+      background: #f5f5f5;
+    }
+
+    .path.power .path-outcome {
+      background: rgba(236, 72, 153, 0.08);
+    }
+
+    .outcome-text {
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .path.basic .outcome-text {
+      color: #666666;
+    }
+
+    .path.power .outcome-text {
+      color: #ec4899;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 28px 40px 36px;
+      background: #ffffff;
+      position: relative;
+    }
+
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #ec4899 0%, #f472b6 50%, #ec4899 100%);
+    }
+
+    .footer p {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #555555;
+      font-style: italic;
+    }
+
+    .footer p strong {
+      color: #0f0f0f;
+      font-weight: 400;
+    }
+
+    .footer p.urgency {
+      font-style: normal;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      font-size: 0.85rem;
+      color: #ec4899;
+      margin-top: 8px;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <div class="graphic">
+    <div class="header">
+      <h1>The AI Productivity Divide</h1>
+      <div class="header-line"></div>
+    </div>
+
+    <div class="content">
+      <div class="starting-point">
+        <div class="start-box">
+          <div class="start-label">The reality</div>
+          <div class="start-text">Everyone has access to AI tools</div>
+          <div class="start-subtext">We're only as good as how we use them</div>
+        </div>
+      </div>
+
+      <div class="split-arrows">
+        <div class="arrow-container">
+          <div class="arrow-single">
+            <div class="arrow-line-down grey"></div>
+            <div class="arrow-head-small grey"></div>
+          </div>
+          <div class="arrow-single">
+            <div class="arrow-line-down pink"></div>
+            <div class="arrow-head-small pink"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="paths-container">
+        <div class="path basic">
+          <div class="path-header">
+            <div class="path-label">Basic User</div>
+          </div>
+          <div class="path-content">
+            <div class="path-items">
+              <div class="path-item">
+                <span class="path-bullet"></span>
+                <span class="path-text">Chat-based Q&A</span>
+              </div>
+              <div class="path-item">
+                <span class="path-bullet"></span>
+                <span class="path-text">Single tool (ChatGPT)</span>
+              </div>
+              <div class="path-item">
+                <span class="path-bullet"></span>
+                <span class="path-text">Manual copy-paste between apps</span>
+              </div>
+              <div class="path-item">
+                <span class="path-bullet"></span>
+                <span class="path-text">One question, one answer, done</span>
+              </div>
+            </div>
+            <div class="path-outcome">
+              <div class="outcome-text">Incremental gains</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="path power">
+          <div class="path-header">
+            <div class="path-label">Power User</div>
+          </div>
+          <div class="path-content">
+            <div class="path-items">
+              <div class="path-item">
+                <span class="path-bullet"></span>
+                <span class="path-text">AI agents and workflows</span>
+              </div>
+              <div class="path-item">
+                <span class="path-bullet"></span>
+                <span class="path-text">Specialised tools working together</span>
+              </div>
+              <div class="path-item">
+                <span class="path-bullet"></span>
+                <span class="path-text">Meeting → notes → images → slides</span>
+              </div>
+              <div class="path-item">
+                <span class="path-bullet"></span>
+                <span class="path-text">Idea to output in minutes</span>
+              </div>
+            </div>
+            <div class="path-outcome">
+              <div class="outcome-text">2-3x more productive</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p><strong>Same tools.</strong> Very different results.</p>
+      <p class="urgency">The gap is widening every day.</p>
+    </div>
+  </div>
+</body>
+</html>

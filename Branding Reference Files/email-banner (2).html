@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI from the Inside - Banner</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+    }
+
+    .banner {
+      width: 1200px;
+      height: 630px;
+      background: #0f0f0f;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, #ec4899 0%, #f472b6 50%, #ec4899 100%);
+    }
+
+    .glow-1 {
+      position: absolute;
+      top: -150px;
+      right: -150px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(236, 72, 153, 0.2) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .glow-2 {
+      position: absolute;
+      bottom: -200px;
+      left: -100px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(236, 72, 153, 0.1) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .grid-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 0 80px;
+    }
+
+    .logo-mark {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 32px;
+      position: relative;
+      box-shadow: 0 20px 60px rgba(236, 72, 153, 0.3);
+    }
+
+    .logo-mark::after {
+      content: '';
+      width: 32px;
+      height: 32px;
+      border: 5px solid #ffffff;
+      border-radius: 50%;
+    }
+
+    .logo-mark::before {
+      content: '';
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      background: #ffffff;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .title {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 4rem;
+      font-weight: 400;
+      color: #ffffff;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      line-height: 1.1;
+    }
+
+    .title span {
+      color: #ec4899;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+      font-weight: 600;
+    }
+
+    .author {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 28px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 100px;
+    }
+
+    .author-label {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.05em;
+    }
+
+    .author-name {
+      font-size: 1.1rem;
+      color: #ffffff;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <div class="glow-1"></div>
+    <div class="glow-2"></div>
+    <div class="grid-overlay"></div>
+    <div class="content">
+      <div class="logo-mark"></div>
+      <h1 class="title">AI from the <span>Inside</span></h1>
+      <p class="tagline">Notes from building and scaling AI-powered businesses</p>
+      <div class="author">
+        <span class="author-label">By</span>
+        <span class="author-name">Thomas Paule</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

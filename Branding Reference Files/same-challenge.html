@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>We're All In This Together - AI from the Inside</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+    }
+
+    .graphic {
+      width: 680px;
+      background: #ffffff;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .header {
+      padding: 40px 40px 32px;
+      text-align: center;
+      position: relative;
+    }
+
+    .header h1 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: #0f0f0f;
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
+
+    .header-line {
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #ec4899 0%, #f472b6 50%, #ec4899 100%);
+      border-radius: 2px;
+    }
+
+    .content {
+      padding: 32px 40px 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .professions-container {
+      position: relative;
+      padding: 20px 0;
+    }
+
+    .professions-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .profession-card {
+      padding: 20px 16px;
+      border-radius: 6px;
+      background: #ffffff;
+      border: 1px solid #e5e5e5;
+      text-align: center;
+      transition: all 0.2s;
+    }
+
+    .profession-icon {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+
+    .profession-name {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #333333;
+    }
+
+    .convergence-arrow {
+      display: flex;
+      justify-content: center;
+      margin: 8px 0 20px;
+    }
+
+    .arrow-down {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .arrow-line-single {
+      width: 2px;
+      height: 32px;
+      background: linear-gradient(180deg, #d0d0d0 0%, #ec4899 100%);
+    }
+
+    .arrow-head-down {
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 10px solid #ec4899;
+    }
+
+    .shared-challenge {
+      padding: 28px 32px;
+      border-radius: 6px;
+      background: #ffffff;
+      border: 1px solid #ec4899;
+      border-left: 4px solid #ec4899;
+      text-align: center;
+    }
+
+    .shared-label {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #ec4899;
+      margin-bottom: 12px;
+    }
+
+    .shared-text {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1.15rem;
+      line-height: 1.5;
+      color: #0f0f0f;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 28px 40px 36px;
+      background: #ffffff;
+      position: relative;
+    }
+
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #ec4899 0%, #f472b6 50%, #ec4899 100%);
+    }
+
+    .footer p {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #555555;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="graphic">
+    <div class="header">
+      <h1>Same Challenge, Different Fields</h1>
+      <div class="header-line"></div>
+    </div>
+
+    <div class="content">
+      <div class="professions-container">
+        <div class="professions-grid">
+          <div class="profession-card">
+            <div class="profession-icon">⚖️</div>
+            <div class="profession-name">Law</div>
+          </div>
+          <div class="profession-card">
+            <div class="profession-icon">📊</div>
+            <div class="profession-name">Consulting</div>
+          </div>
+          <div class="profession-card">
+            <div class="profession-icon">💰</div>
+            <div class="profession-name">Financial Advice</div>
+          </div>
+          <div class="profession-card">
+            <div class="profession-icon">📐</div>
+            <div class="profession-name">Architecture</div>
+          </div>
+          <div class="profession-card">
+            <div class="profession-icon">⚙️</div>
+            <div class="profession-name">Engineering</div>
+          </div>
+          <div class="profession-card">
+            <div class="profession-icon">👥</div>
+            <div class="profession-name">HR</div>
+          </div>
+        </div>
+
+        <div class="convergence-arrow">
+          <div class="arrow-down">
+            <div class="arrow-line-single"></div>
+            <div class="arrow-head-down"></div>
+          </div>
+        </div>
+
+        <div class="shared-challenge">
+          <div class="shared-label">The shared challenge</div>
+          <p class="shared-text">When expertise becomes accessible,<br>what makes the expert valuable?</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Different details. Same question.</p>
+    </div>
+  </div>
+</body>
+</html>

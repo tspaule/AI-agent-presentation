@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI from the Inside - Wordmark</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+    }
+
+    .wordmark {
+      width: 1344px;
+      height: 256px;
+      background: transparent;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 64px;
+    }
+
+    .logo-mark {
+      width: 180px;
+      height: 180px;
+      background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+      border-radius: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow: 0 16px 48px rgba(236, 72, 153, 0.35);
+      flex-shrink: 0;
+      margin-right: 24px;
+    }
+
+    .logo-mark::after {
+      content: '';
+      width: 72px;
+      height: 72px;
+      border: 12px solid #ffffff;
+      border-radius: 50%;
+    }
+
+    .logo-mark::before {
+      content: '';
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      background: #ffffff;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .title {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 4.5rem;
+      font-weight: 400;
+      color: #0f0f0f;
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+
+    .title span {
+      color: #ec4899;
+    }
+
+    .tagline {
+      font-size: 1.1rem;
+      color: rgba(15, 15, 15, 0.5);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <div class="wordmark">
+    <div class="logo-mark"></div>
+    <div class="text">
+      <div class="title">AI from the <span>Inside</span></div>
+      <div class="tagline">Notes from building and scaling AI-powered businesses</div>
+    </div>
+  </div>
+</body>
+</html>
