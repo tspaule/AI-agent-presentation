@@ -1,41 +1,98 @@
 import { motion } from 'framer-motion'
+import { useTheme } from '../../hooks/useTheme'
 
 export default function DiagramSlide({ title, subtitle, children, message }) {
-  return (
-    <div className="relative w-full h-full flex flex-col overflow-hidden">
-      <div className="absolute inset-0 grid-overlay pointer-events-none opacity-50" />
+  const { colors, isDark } = useTheme()
 
-      <div className="flex flex-col justify-center px-20 py-16 w-full max-w-6xl mx-auto h-full">
+  return (
+    <div
+      className="relative w-full h-full flex flex-col items-center justify-center overflow-hidden"
+      style={{ background: colors.bg }}
+    >
+      {/* Grid overlay */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          opacity: 0.5,
+          backgroundImage: isDark
+            ? 'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)'
+            : 'linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px)',
+          backgroundSize: '60px 60px',
+        }}
+      />
+
+      {/* Content - centered with generous padding */}
+      <div className="relative z-10 flex flex-col items-center w-full h-full" style={{ padding: '5vh 8vw', maxWidth: '1200px' }}>
+        {/* Subtitle label */}
         {subtitle && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="mb-3"
+            className="mb-3 text-center"
           >
-            <span className="text-sm text-brand font-semibold tracking-widest uppercase">{subtitle}</span>
+            <span
+              style={{
+                fontSize: '0.875rem',
+                color: colors.brand,
+                fontWeight: 600,
+                letterSpacing: '0.2em',
+                textTransform: 'uppercase',
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+              }}
+            >
+              {subtitle}
+            </span>
           </motion.div>
         )}
 
+        {/* Centered title */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.6 }}
-          className="font-serif text-5xl font-normal text-white tracking-tight leading-tight mb-10"
+          className="tracking-tight text-center leading-tight mb-4"
+          style={{
+            fontFamily: 'Georgia, "Times New Roman", serif',
+            fontSize: '3.5rem',
+            fontWeight: 'normal',
+            color: colors.text,
+          }}
         >
           {title}
         </motion.h2>
 
-        {/* Custom diagram content */}
-        <div className="flex-1 flex items-center justify-center">
+        {/* 4px gradient separator line */}
+        <motion.div
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          className="mb-8"
+          style={{
+            width: '80px',
+            height: '4px',
+            borderRadius: '2px',
+            background: colors.gradientLine,
+          }}
+        />
+
+        {/* Flexible children area for custom diagrams */}
+        <div className="flex-1 flex items-center justify-center w-full">
           {children}
         </div>
 
+        {/* Message at bottom */}
         {message && (
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.0, duration: 0.5 }}
-            className="text-center text-xl text-brand font-serif italic mt-6"
+            className="text-center mt-6"
+            style={{
+              fontSize: '1.3rem',
+              color: colors.brand,
+              fontFamily: 'Georgia, "Times New Roman", serif',
+              fontStyle: 'italic',
+            }}
           >
             &ldquo;{message}&rdquo;
           </motion.p>

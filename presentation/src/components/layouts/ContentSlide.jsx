@@ -1,69 +1,159 @@
 import { motion } from 'framer-motion'
+import { useTheme } from '../../hooks/useTheme'
 
 export default function ContentSlide({ title, subtitle, bullets, footnote, accentWord }) {
+  const { colors, isDark } = useTheme()
+
+  // Render title with optional accent word in gradient
+  const renderTitle = () => {
+    if (!accentWord || !title.includes(accentWord)) {
+      return title
+    }
+    const parts = title.split(accentWord)
+    return (
+      <>
+        {parts[0]}
+        <span
+          style={{
+            background: 'linear-gradient(135deg, #ec4899, #f472b6)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+          }}
+        >
+          {accentWord}
+        </span>
+        {parts[1]}
+      </>
+    )
+  }
+
   return (
-    <div className="relative w-full h-full flex overflow-hidden">
-      {/* Left accent */}
-      <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-brand via-brand/50 to-transparent" />
-
+    <div
+      className="relative w-full h-full flex flex-col items-center justify-center overflow-hidden"
+      style={{ background: colors.bg }}
+    >
       {/* Background glow */}
-      <div className="absolute top-[-100px] right-[-100px] w-[400px] h-[400px] bg-[radial-gradient(circle,rgba(236,72,153,0.08)_0%,transparent_60%)] pointer-events-none" />
+      <div
+        className="absolute pointer-events-none"
+        style={{
+          top: '-100px',
+          right: '-100px',
+          width: '400px',
+          height: '400px',
+          background: 'radial-gradient(circle, rgba(236,72,153,0.08) 0%, transparent 60%)',
+        }}
+      />
 
-      <div className="flex flex-col justify-center px-20 py-16 w-full max-w-5xl mx-auto">
-        {/* Subtitle tag */}
+      {/* Content area - centered with generous padding */}
+      <div className="relative z-10 flex flex-col items-center justify-center w-full" style={{ padding: '5vh 8vw', maxWidth: '1100px' }}>
+        {/* Subtitle section label */}
         {subtitle && (
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="mb-4"
+            className="mb-4 text-center"
           >
-            <span className="text-sm text-brand font-semibold tracking-widest uppercase">
+            <span
+              style={{
+                fontSize: '0.875rem',
+                color: colors.brand,
+                fontWeight: 600,
+                letterSpacing: '0.2em',
+                textTransform: 'uppercase',
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+              }}
+            >
               {subtitle}
             </span>
           </motion.div>
         )}
 
-        {/* Title */}
+        {/* Title - centered with optional accent word in gradient */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.6 }}
-          className="font-serif text-5xl font-normal text-white tracking-tight leading-tight mb-10"
+          className="tracking-tight text-center leading-tight mb-4"
+          style={{
+            fontFamily: 'Georgia, "Times New Roman", serif',
+            fontSize: '3.5rem',
+            fontWeight: 'normal',
+            color: colors.text,
+          }}
         >
-          {accentWord ? (
-            <>
-              {title.split(accentWord)[0]}
-              <span className="gradient-text">{accentWord}</span>
-              {title.split(accentWord)[1]}
-            </>
-          ) : title}
+          {renderTitle()}
         </motion.h2>
 
-        {/* Bullets */}
-        <div className="space-y-5">
-          {bullets.map((bullet, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.3 + i * 0.1, duration: 0.5 }}
-              className="flex items-start gap-4"
-            >
-              {bullet.icon ? (
-                <span className="text-2xl mt-0.5 shrink-0">{bullet.icon}</span>
-              ) : (
-                <div className="mt-2.5 w-2 h-2 rounded-full bg-brand shrink-0" />
-              )}
-              <div>
-                {bullet.heading && (
-                  <span className="text-white font-semibold text-lg">{bullet.heading} </span>
+        {/* 4px gradient separator line */}
+        <motion.div
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          className="mb-10"
+          style={{
+            width: '80px',
+            height: '4px',
+            borderRadius: '2px',
+            background: colors.gradientLine,
+          }}
+        />
+
+        {/* Bullets - centered with icons, gap-6 spacing */}
+        {bullets && (
+          <div className="flex flex-col items-center gap-6 w-full">
+            {bullets.map((bullet, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 + i * 0.1, duration: 0.5 }}
+                className="flex items-start gap-4 text-center"
+                style={{ maxWidth: '800px' }}
+              >
+                {bullet.icon ? (
+                  <span className="shrink-0" style={{ fontSize: '1.6rem', marginTop: '2px' }}>{bullet.icon}</span>
+                ) : (
+                  <div
+                    className="shrink-0"
+                    style={{
+                      marginTop: '10px',
+                      width: '8px',
+                      height: '8px',
+                      borderRadius: '50%',
+                      background: colors.brand,
+                    }}
+                  />
                 )}
-                <span className="text-white/60 text-lg leading-relaxed">{bullet.text}</span>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+                <div className="text-left">
+                  {bullet.heading && (
+                    <span
+                      style={{
+                        color: colors.text,
+                        fontWeight: 600,
+                        fontSize: '1.35rem',
+                        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                      }}
+                    >
+                      {bullet.heading}{' '}
+                    </span>
+                  )}
+                  <span
+                    style={{
+                      color: colors.textSecondary,
+                      fontSize: '1.3rem',
+                      lineHeight: 1.7,
+                      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                    }}
+                  >
+                    {bullet.text}
+                  </span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        )}
 
         {/* Footnote */}
         {footnote && (
@@ -71,7 +161,14 @@ export default function ContentSlide({ title, subtitle, bullets, footnote, accen
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8, duration: 0.5 }}
-            className="mt-10 text-sm text-white/30 italic"
+            className="text-center"
+            style={{
+              marginTop: '40px',
+              fontSize: '0.95rem',
+              color: colors.textTertiary,
+              fontStyle: 'italic',
+              fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+            }}
           >
             {footnote}
           </motion.p>
