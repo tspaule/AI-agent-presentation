@@ -38,7 +38,7 @@ export default function SectionSlide({ sectionNumber, title, subtitle, icon }) {
       />
 
       {/* Content with generous padding */}
-      <div className="relative z-10 flex flex-col items-center justify-center text-center" style={{ padding: '5vh 8vw' }}>
+      <div className="relative z-10 flex flex-col items-center justify-center text-center" style={{ padding: '4vh 4vw' }}>
         {/* Section pill badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -88,7 +88,7 @@ export default function SectionSlide({ sectionNumber, title, subtitle, icon }) {
           className="tracking-tight text-center leading-tight mb-5"
           style={{
             fontFamily: 'Georgia, "Times New Roman", serif',
-            fontSize: '4.5rem',
+            fontSize: '5.5rem',
             fontWeight: 'normal',
             color: colors.text,
           }}
@@ -104,7 +104,7 @@ export default function SectionSlide({ sectionNumber, title, subtitle, icon }) {
             transition={{ delay: 0.5, duration: 0.6 }}
             className="text-center"
             style={{
-              fontSize: '1.4rem',
+              fontSize: '1.7rem',
               color: colors.textSecondary,
               maxWidth: '600px',
               lineHeight: 1.6,

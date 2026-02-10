@@ -22,7 +22,7 @@ export default function DiagramSlide({ title, subtitle, children, message }) {
       />
 
       {/* Content - centered with generous padding */}
-      <div className="relative z-10 flex flex-col items-center w-full h-full" style={{ padding: '5vh 8vw', maxWidth: '1200px' }}>
+      <div className="relative z-10 flex flex-col items-center w-full h-full" style={{ padding: '4vh 4vw', maxWidth: '1500px' }}>
         {/* Subtitle label */}
         {subtitle && (
           <motion.div
@@ -53,7 +53,7 @@ export default function DiagramSlide({ title, subtitle, children, message }) {
           className="tracking-tight text-center leading-tight mb-4"
           style={{
             fontFamily: 'Georgia, "Times New Roman", serif',
-            fontSize: '3.5rem',
+            fontSize: '4rem',
             fontWeight: 'normal',
             color: colors.text,
           }}
@@ -88,7 +88,7 @@ export default function DiagramSlide({ title, subtitle, children, message }) {
             transition={{ delay: 1.0, duration: 0.5 }}
             className="text-center mt-6"
             style={{
-              fontSize: '1.3rem',
+              fontSize: '1.5rem',
               color: colors.brand,
               fontFamily: 'Georgia, "Times New Roman", serif',
               fontStyle: 'italic',

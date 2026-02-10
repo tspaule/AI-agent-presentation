@@ -15,7 +15,7 @@ function HorizontalBar({ label, value, icon, delay, color, colors }) {
           <span
             style={{
               color: colors.textSecondary,
-              fontSize: '1.2rem',
+              fontSize: '1.4rem',
               fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
             }}
           >
@@ -25,7 +25,7 @@ function HorizontalBar({ label, value, icon, delay, color, colors }) {
             style={{
               color: colors.text,
               fontWeight: 700,
-              fontSize: '1.2rem',
+              fontSize: '1.4rem',
               fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
             }}
           >
@@ -35,7 +35,7 @@ function HorizontalBar({ label, value, icon, delay, color, colors }) {
         <div
           className="w-full overflow-hidden"
           style={{
-            height: '14px',
+            height: '16px',
             borderRadius: '7px',
             background: colors.greyBg,
           }}
@@ -125,7 +125,7 @@ export default function ChartSlide({ title, subtitle, bars, pie, legend, message
       />
 
       {/* Content - centered with generous padding */}
-      <div className="relative z-10 flex flex-col items-center w-full" style={{ padding: '5vh 8vw', maxWidth: '1100px' }}>
+      <div className="relative z-10 flex flex-col items-center w-full" style={{ padding: '4vh 4vw', maxWidth: '1400px' }}>
         {/* Subtitle label */}
         {subtitle && (
           <motion.div
@@ -156,7 +156,7 @@ export default function ChartSlide({ title, subtitle, bars, pie, legend, message
           className="tracking-tight text-center leading-tight mb-4"
           style={{
             fontFamily: 'Georgia, "Times New Roman", serif',
-            fontSize: '3.5rem',
+            fontSize: '4rem',
             fontWeight: 'normal',
             color: colors.text,
           }}
@@ -182,7 +182,7 @@ export default function ChartSlide({ title, subtitle, bars, pie, legend, message
         <div className="flex gap-12 items-center w-full justify-center">
           {/* Bars */}
           {bars && (
-            <div className="flex-1 flex flex-col gap-6" style={{ maxWidth: '600px' }}>
+            <div className="flex-1 flex flex-col gap-6" style={{ maxWidth: '800px' }}>
               {bars.map((bar, i) => (
                 <HorizontalBar
                   key={i}
@@ -254,7 +254,7 @@ export default function ChartSlide({ title, subtitle, bars, pie, legend, message
             <span
               style={{
                 color: colors.textSecondary,
-                fontSize: '1.2rem',
+                fontSize: '1.4rem',
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
               }}
             >

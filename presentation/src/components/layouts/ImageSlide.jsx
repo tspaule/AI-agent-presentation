@@ -34,7 +34,7 @@ export default function ImageSlide({ title, subtitle, imageSrc, imageAlt, captio
       {/* Title and caption at bottom - centered */}
       <div
         className="relative z-10 flex flex-col justify-end items-center w-full text-center"
-        style={{ padding: '5vh 8vw' }}
+        style={{ padding: '4vh 4vw' }}
       >
         {/* Subtitle label */}
         {subtitle && (
@@ -67,7 +67,7 @@ export default function ImageSlide({ title, subtitle, imageSrc, imageAlt, captio
           className="tracking-tight text-center leading-tight mb-4"
           style={{
             fontFamily: 'Georgia, "Times New Roman", serif',
-            fontSize: '3.5rem',
+            fontSize: '4rem',
             fontWeight: 'normal',
             color: colors.text,
           }}
@@ -82,7 +82,7 @@ export default function ImageSlide({ title, subtitle, imageSrc, imageAlt, captio
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.5 }}
             style={{
-              fontSize: '1.3rem',
+              fontSize: '1.5rem',
               color: colors.textSecondary,
               maxWidth: '700px',
               lineHeight: 1.6,

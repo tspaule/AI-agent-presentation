@@ -23,7 +23,7 @@ export default function DemoSlide({ title, subtitle, steps, stat, statLabel, ima
       />
 
       {/* Content - CENTERED with generous padding */}
-      <div className="relative z-10 flex flex-col items-center w-full text-center" style={{ padding: '5vh 8vw', maxWidth: '1100px' }}>
+      <div className="relative z-10 flex flex-col items-center w-full text-center" style={{ padding: '4vh 4vw', maxWidth: '1400px' }}>
         {/* "LIVE DEMO" badge */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -58,7 +58,7 @@ export default function DemoSlide({ title, subtitle, steps, stat, statLabel, ima
           className="tracking-tight text-center leading-tight mb-3"
           style={{
             fontFamily: 'Georgia, "Times New Roman", serif',
-            fontSize: '3.5rem',
+            fontSize: '4rem',
             fontWeight: 'normal',
             color: colors.text,
           }}
@@ -74,7 +74,7 @@ export default function DemoSlide({ title, subtitle, steps, stat, statLabel, ima
             transition={{ delay: 0.2, duration: 0.5 }}
             className="text-center mb-8"
             style={{
-              fontSize: '1.3rem',
+              fontSize: '1.5rem',
               color: colors.textSecondary,
               fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
             }}
@@ -87,7 +87,7 @@ export default function DemoSlide({ title, subtitle, steps, stat, statLabel, ima
         <div className="flex gap-12 items-center w-full justify-center">
           {/* Numbered steps with brand-colored numbers */}
           {steps && (
-            <div className="flex-1 flex flex-col gap-5" style={{ maxWidth: '550px' }}>
+            <div className="flex-1 flex flex-col gap-5" style={{ maxWidth: '700px' }}>
               {steps.map((step, i) => (
                 <motion.div
                   key={i}
@@ -121,7 +121,7 @@ export default function DemoSlide({ title, subtitle, steps, stat, statLabel, ima
                   <span
                     style={{
                       color: colors.textSecondary,
-                      fontSize: '1.2rem',
+                      fontSize: '1.4rem',
                       lineHeight: 1.6,
                       fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                     }}
@@ -155,7 +155,7 @@ export default function DemoSlide({ title, subtitle, steps, stat, statLabel, ima
                 >
                   <div
                     style={{
-                      fontSize: '4rem',
+                      fontSize: '5rem',
                       fontWeight: 700,
                       background: 'linear-gradient(135deg, #ec4899, #f472b6)',
                       WebkitBackgroundClip: 'text',
@@ -205,7 +205,7 @@ export default function DemoSlide({ title, subtitle, steps, stat, statLabel, ima
           >
             <span
               style={{
-                fontSize: '1.2rem',
+                fontSize: '1.4rem',
                 color: colors.brand,
                 fontFamily: 'Georgia, "Times New Roman", serif',
                 fontStyle: 'italic',

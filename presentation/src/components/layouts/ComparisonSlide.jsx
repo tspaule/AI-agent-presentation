@@ -21,7 +21,7 @@ export default function ComparisonSlide({ title, subtitle, left, right, message 
       />
 
       {/* Content - centered with generous padding */}
-      <div className="relative z-10 flex flex-col items-center w-full h-full justify-center" style={{ padding: '5vh 8vw', maxWidth: '1200px' }}>
+      <div className="relative z-10 flex flex-col items-center w-full h-full justify-center" style={{ padding: '4vh 4vw', maxWidth: '1500px' }}>
         {/* Subtitle label */}
         {subtitle && (
           <motion.div
@@ -52,7 +52,7 @@ export default function ComparisonSlide({ title, subtitle, left, right, message 
           className="tracking-tight text-center leading-tight mb-4"
           style={{
             fontFamily: 'Georgia, "Times New Roman", serif',
-            fontSize: '3.5rem',
+            fontSize: '4rem',
             fontWeight: 'normal',
             color: colors.text,
           }}
@@ -94,7 +94,7 @@ export default function ComparisonSlide({ title, subtitle, left, right, message 
               {left.icon && <span style={{ fontSize: '1.8rem' }}>{left.icon}</span>}
               <h3
                 style={{
-                  fontSize: '1.5rem',
+                  fontSize: '1.7rem',
                   fontWeight: 700,
                   color: colors.text,
                   fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
@@ -124,7 +124,7 @@ export default function ComparisonSlide({ title, subtitle, left, right, message 
                   <span
                     style={{
                       color: colors.textSecondary,
-                      fontSize: '1.15rem',
+                      fontSize: '1.35rem',
                       lineHeight: 1.6,
                       fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                     }}
@@ -156,7 +156,7 @@ export default function ComparisonSlide({ title, subtitle, left, right, message 
               {right.icon && <span style={{ fontSize: '1.8rem' }}>{right.icon}</span>}
               <h3
                 style={{
-                  fontSize: '1.5rem',
+                  fontSize: '1.7rem',
                   fontWeight: 700,
                   color: colors.text,
                   fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
@@ -186,7 +186,7 @@ export default function ComparisonSlide({ title, subtitle, left, right, message 
                   <span
                     style={{
                       color: isDark ? 'rgba(255,255,255,0.8)' : 'rgba(0,0,0,0.75)',
-                      fontSize: '1.15rem',
+                      fontSize: '1.35rem',
                       lineHeight: 1.6,
                       fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                     }}
@@ -209,7 +209,7 @@ export default function ComparisonSlide({ title, subtitle, left, right, message 
           >
             <span
               style={{
-                fontSize: '1.3rem',
+                fontSize: '1.5rem',
                 color: colors.brand,
                 fontFamily: 'Georgia, "Times New Roman", serif',
                 fontStyle: 'italic',

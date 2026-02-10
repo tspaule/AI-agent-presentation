@@ -46,7 +46,7 @@ export default function ContentSlide({ title, subtitle, bullets, footnote, accen
       />
 
       {/* Content area - centered with generous padding */}
-      <div className="relative z-10 flex flex-col items-center justify-center w-full" style={{ padding: '5vh 8vw', maxWidth: '1100px' }}>
+      <div className="relative z-10 flex flex-col items-center justify-center w-full" style={{ padding: '4vh 4vw', maxWidth: '1400px' }}>
         {/* Subtitle section label */}
         {subtitle && (
           <motion.div
@@ -78,7 +78,7 @@ export default function ContentSlide({ title, subtitle, bullets, footnote, accen
           className="tracking-tight text-center leading-tight mb-4"
           style={{
             fontFamily: 'Georgia, "Times New Roman", serif',
-            fontSize: '3.5rem',
+            fontSize: '4rem',
             fontWeight: 'normal',
             color: colors.text,
           }}
@@ -110,7 +110,7 @@ export default function ContentSlide({ title, subtitle, bullets, footnote, accen
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 + i * 0.1, duration: 0.5 }}
                 className="flex items-start gap-4 text-center"
-                style={{ maxWidth: '800px' }}
+                style={{ maxWidth: '1000px' }}
               >
                 {bullet.icon ? (
                   <span className="shrink-0" style={{ fontSize: '1.6rem', marginTop: '2px' }}>{bullet.icon}</span>
@@ -132,7 +132,7 @@ export default function ContentSlide({ title, subtitle, bullets, footnote, accen
                       style={{
                         color: colors.text,
                         fontWeight: 600,
-                        fontSize: '1.35rem',
+                        fontSize: '1.6rem',
                         fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                       }}
                     >
@@ -142,7 +142,7 @@ export default function ContentSlide({ title, subtitle, bullets, footnote, accen
                   <span
                     style={{
                       color: colors.textSecondary,
-                      fontSize: '1.3rem',
+                      fontSize: '1.5rem',
                       lineHeight: 1.7,
                       fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                     }}
@@ -164,7 +164,7 @@ export default function ContentSlide({ title, subtitle, bullets, footnote, accen
             className="text-center"
             style={{
               marginTop: '40px',
-              fontSize: '0.95rem',
+              fontSize: '1.1rem',
               color: colors.textTertiary,
               fontStyle: 'italic',
               fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',

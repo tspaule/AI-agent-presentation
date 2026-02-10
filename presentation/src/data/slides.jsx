@@ -46,7 +46,7 @@ export const slides = [
       accentWord="Here?"
       bullets={[
         { icon: '\u{1F4AC}', text: 'AI has quietly moved from chatbots to autonomous agents' },
-        { icon: '\u{1F30D}', text: 'Most people know ChatGPT \u2014 fewer know what\u2019s actually possible now' },
+        { icon: '\u{1F30D}', text: 'Most people know ChatGPT, but fewer know what is actually possible now' },
         { icon: '\u{1F3AF}', text: 'Tonight: demystify agents, show real use cases, answer your questions' },
       ]}
     />
@@ -55,13 +55,13 @@ export const slides = [
   // 2: Tonight's Agenda
   () => (
     <ContentSlide
-      title="Tonight\u2019s Agenda"
+      title="Tonight's Agenda"
       accentWord="Agenda"
       bullets={[
-        { icon: '\u{1F4CA}', heading: 'Your Feedback', text: '\u2014 what you told us you wanted' },
-        { icon: '\u{1F9E0}', heading: 'Theory', text: '\u2014 WTF are AI Agents?' },
-        { icon: '\u{1F6E0}\uFE0F', heading: 'Practical', text: '\u2014 agents doing real work (live demos!)' },
-        { icon: '\u2753', heading: 'Questions', text: '\u2014 open discussion' },
+        { icon: '\u{1F4CA}', heading: 'Your Feedback', text: 'What you told us you wanted' },
+        { icon: '\u{1F9E0}', heading: 'Theory', text: 'WTF are AI Agents?' },
+        { icon: '\u{1F6E0}\uFE0F', heading: 'Practical', text: 'Agents doing real work (live demos!)' },
+        { icon: '\u2753', heading: 'Questions', text: 'Open discussion' },
       ]}
     />
   ),
@@ -72,9 +72,9 @@ export const slides = [
       title="Rules of Engagement"
       accentWord="Engagement"
       bullets={[
-        { icon: '\u270B', text: 'Raise your hand for questions \u2014 keeps things orderly' },
+        { icon: '\u270B', text: 'Raise your hand for questions, keeps things orderly' },
         { icon: '\u{1F37A}', text: 'Beers encouraged, heckling discouraged' },
-        { icon: '\u{1F914}', text: 'No \u201Cdumb questions\u201D \u2014 if you\u2019re thinking it, others are too' },
+        { icon: '\u{1F914}', text: 'No "dumb questions" - if you are thinking it, others are too' },
         { icon: '\u{1F4F1}', text: 'Feel free to follow along on your phone' },
       ]}
       footnote="This is beer & learn, not a board meeting."
@@ -90,7 +90,7 @@ export const slides = [
     <SectionSlide
       sectionNumber="1"
       title="We Asked, You Answered"
-      subtitle="12 of you shared your thoughts \u2014 here\u2019s what we learned"
+      subtitle="12 of you shared your thoughts, here is what we learned"
       icon={'\u{1F4CA}'}
     />
   ),
@@ -99,13 +99,13 @@ export const slides = [
   () => (
     <ChartSlide
       title="Your Experience Level"
-      subtitle="Who\u2019s in the room"
+      subtitle="Who's in the room"
       bars={[
-        { label: 'Daily Users \u2014 AI integral to workflow', value: 42, icon: '\u{1F525}' },
-        { label: 'Occasional Users \u2014 still exploring', value: 58, icon: '\u{1F4AD}' },
+        { label: 'Daily Users: AI integral to workflow', value: 42, icon: '\u{1F525}' },
+        { label: 'Occasional Users: still exploring', value: 58, icon: '\u{1F4AD}' },
         { label: 'Complete Beginners', value: 0, icon: '\u{1F331}' },
       ]}
-      message="We\u2019ll make sure tonight works for both groups."
+      message="We'll make sure tonight works for both groups."
     />
   ),
 
@@ -120,7 +120,7 @@ export const slides = [
         { label: 'Not Knowing Where to Start', value: 50, icon: '\u{1F937}' },
         { label: 'Cost / Subscriptions', value: 33, icon: '\u{1F4B0}' },
       ]}
-      message="We heard you \u2014 we\u2019ll address all of these tonight."
+      message="We heard you. We will address all of these tonight."
     />
   ),
 
@@ -131,10 +131,10 @@ export const slides = [
       subtitle="Your Pain Points"
       accentWord="Easier"
       bullets={[
-        { icon: '\u{1F4E7}', heading: '#1 Email management', text: '\u2014 the top pain point across the group' },
-        { icon: '\u{1F4CA}', heading: 'Data reporting', text: '\u2014 weekly insights and analysis taking hours' },
-        { icon: '\u{1F504}', heading: 'Context loading', text: '\u2014 \u201CCopying and pasting everything into GPT\u201D' },
-        { icon: '\u{1F465}', heading: 'Client monitoring', text: '\u2014 periodic touchpoints and follow-ups' },
+        { icon: '\u{1F4E7}', heading: '#1 Email management', text: 'The top pain point across the group' },
+        { icon: '\u{1F4CA}', heading: 'Data reporting', text: 'Weekly insights and analysis taking hours' },
+        { icon: '\u{1F504}', heading: 'Context loading', text: '"Copying and pasting everything into GPT"' },
+        { icon: '\u{1F465}', heading: 'Client monitoring', text: 'Periodic touchpoints and follow-ups' },
       ]}
     />
   ),
@@ -142,7 +142,7 @@ export const slides = [
   // 8: Dream Quote
   () => (
     <QuoteSlide
-      quote="I\u2019ve been wanting to learn how to setup an agent so that every Thursday when data is released, I come to work and a report is sitting there for me."
+      quote="I've been wanting to learn how to setup an agent so that every Thursday when data is released, I come to work and a report is sitting there for me."
       attribution="Survey Respondent"
       context="This is exactly what agents can do."
     />
@@ -155,26 +155,26 @@ export const slides = [
       subtitle="In Your Words"
       accentWord="Tonight"
       bullets={[
-        { icon: '\u{1F4AC}', text: '\u201CIs there a genuine AI agent I should be using today?\u201D' },
-        { icon: '\u{1F4AC}', text: '\u201CPractical steps to set up a usable AI stack\u201D' },
-        { icon: '\u{1F4AC}', text: '\u201CHow to build an agent in a secure environment\u201D' },
-        { icon: '\u{1F4AC}', text: '\u201CBest tools and best way to use them\u201D' },
+        { icon: '\u{1F4AC}', text: '"Is there a genuine AI agent I should be using today?"' },
+        { icon: '\u{1F4AC}', text: '"Practical steps to set up a usable AI stack"' },
+        { icon: '\u{1F4AC}', text: '"How to build an agent in a secure environment"' },
+        { icon: '\u{1F4AC}', text: '"Best tools and best way to use them"' },
       ]}
-      footnote="Let\u2019s answer these questions."
+      footnote="Let's answer these questions."
     />
   ),
 
   // 10: Context loading frustration
   () => (
     <QuoteSlide
-      quote="I\u2019m starting to find it very tedious pushing context into ChatGPT. I wish I could automatically connect it to my email, calendar, Teams chats and HubSpot."
+      quote="I'm starting to find it very tedious pushing context into ChatGPT. I wish I could automatically connect it to my email, calendar, Teams chats and HubSpot."
       attribution="Survey Respondent"
-      context="Context is one of the seven building blocks. We\u2019ll get to it."
+      context="Context is one of the seven building blocks. We'll get to it."
     />
   ),
 
   // ============================================================
-  // SECTION 3: THEORY \u2014 WTF ARE AI AGENTS? (11-24)
+  // SECTION 3: THEORY -WTF ARE AI AGENTS? (11-24)
   // ============================================================
 
   // 11: Section divider
@@ -198,12 +198,12 @@ export const slides = [
     </DiagramSlide>
   ),
 
-  // 13: Building Block 1 \u2014 Model
+  // 13: Building Block 1 -Model
   () => (
     <BuildingBlockSlide
       number="1"
       icon={'\u{1F9E0}'}
-      title="Model \u2014 The Brain"
+      title="Model: The Brain"
       subtitle="The underlying AI that reasons and generates"
       keyInsight="Not every task needs the most powerful model. Sometimes fast and cheap beats slow and brilliant."
       details={[
@@ -214,26 +214,26 @@ export const slides = [
     />
   ),
 
-  // 14: Building Block 2 \u2014 Instructions
+  // 14: Building Block 2 -Instructions
   () => (
     <BuildingBlockSlide
       number="2"
       icon={'\u{1F4CB}'}
-      title="Instructions \u2014 Identity & Rules"
+      title="Instructions: Identity & Rules"
       subtitle="Who the agent is and how it behaves"
       keyInsight="Without clear instructions, an agent is generic. With them, it becomes your specialist."
       example="You are a senior financial controller. Be precise and conservative. Always flag discrepancies over $500. Never auto-approve payments above $10,000."
     />
   ),
 
-  // 15: Building Block 3 \u2014 Skills (Matrix image)
+  // 15: Building Block 3 -Skills (Matrix image)
   () => (
     <ImageSlide
-      title="Skills \u2014 Learned Capabilities"
+      title="Skills: Learned Capabilities"
       subtitle="Building Block 3"
       imageSrc="/image-003.png"
-      imageAlt="Matrix \u2014 I Know Kung Fu"
-      caption="Skills define what the agent knows how to do. Like uploading kung fu to Neo\u2019s brain."
+      imageAlt="Matrix, I Know Kung Fu"
+      caption="Skills define what the agent knows how to do. Like uploading kung fu to Neo's brain."
       overlay="bg-gradient-to-t from-black via-black/70 to-black/30"
     />
   ),
@@ -243,11 +243,11 @@ export const slides = [
     <BuildingBlockSlide
       number="3"
       icon={'\u26A1'}
-      title="Skills \u2014 Packaged Expertise"
+      title="Skills: Packaged Expertise"
       subtitle="Knowledge, judgment, and process bundled together"
       keyInsight="Skills can be built-in, custom-written, or downloaded from skills databases online and plugged into your agent."
       details={[
-        'Not just access \u2014 expertise with judgment about when and how',
+        'Not just access, but expertise with judgment about when and how',
         'Pre-built skills available from databases (ClawdHub, OpenClaw)',
         'Custom skills for your specific workflows',
       ]}
@@ -264,59 +264,59 @@ export const slides = [
         title: 'Skills',
         icon: '\u26A1',
         items: [
-          { icon: '\u2192', text: 'HOW to do something' },
-          { icon: '\u2192', text: 'Judgment & process' },
-          { icon: '\u2192', text: 'Expertise-based' },
-          { icon: '\u2192', text: '\u201CKnow how to reconcile accounts\u201D' },
+          { icon: '→', text: 'HOW to do something' },
+          { icon: '→', text: 'Judgment & process' },
+          { icon: '→', text: 'Expertise-based' },
+          { icon: '→', text: '"Know how to reconcile accounts"' },
         ],
       }}
       right={{
         title: 'Tools',
         icon: '\u{1F527}',
         items: [
-          { icon: '\u2192', text: 'WHAT to interact with' },
-          { icon: '\u2192', text: 'Single actions (verbs)' },
-          { icon: '\u2192', text: 'Capability-based' },
-          { icon: '\u2192', text: '\u201CCan read a bank feed\u201D' },
+          { icon: '→', text: 'WHAT to interact with' },
+          { icon: '→', text: 'Single actions (verbs)' },
+          { icon: '→', text: 'Capability-based' },
+          { icon: '→', text: '"Can read a bank feed"' },
         ],
       }}
       message="Skills use Tools, but add judgment about when and how."
     />
   ),
 
-  // 18: Building Block 4 \u2014 Tools
+  // 18: Building Block 4 -Tools
   () => (
     <DiagramSlide
-      title="Tools \u2014 The Actions"
+      title="Tools: The Actions"
       subtitle="Building Block 4"
-      message="Tools are the verbs \u2014 each one does one thing."
+      message="Tools are the verbs. Each one does one thing."
     >
       <ToolCallingDiagram />
     </DiagramSlide>
   ),
 
-  // 19: Building Block 5 \u2014 Context
+  // 19: Building Block 5 -Context
   () => (
     <BuildingBlockSlide
       number="5"
       icon={'\u{1F4E5}'}
-      title="Context \u2014 What\u2019s on the Desk"
+      title="Context: What is on the Desk"
       subtitle="Dynamic, task-specific information"
       keyInsight="Context solves the copy-paste problem. No more explaining the same thing every conversation."
       details={[
-        'Changes every time \u2014 makes work specific, not generic',
+        'Changes every time, making work specific not generic',
         'Sources: email, calendar, CRM, documents, real-time feeds',
         'The agent knows your world without you pasting it in',
       ]}
     />
   ),
 
-  // 20: Building Block 6 \u2014 Memory
+  // 20: Building Block 6 -Memory
   () => (
     <BuildingBlockSlide
       number="6"
       icon={'\u{1F4BE}'}
-      title="Memory \u2014 Persistence"
+      title="Memory: Persistence"
       subtitle="What the agent retains across interactions"
       keyInsight="Memory turns every interaction from a cold start into a continuation."
       details={[
@@ -324,14 +324,14 @@ export const slides = [
         'Short-term (this conversation) and long-term (across sessions)',
         'What makes it feel like YOUR assistant, not a generic AI',
       ]}
-      example="Remembering that this client always miscodes contractor payments to \u2018office supplies,\u2019 so the agent proactively flags and reclassifies them."
+      example="Remembering that this client always miscodes contractor payments to 'office supplies,' so the agent proactively flags and reclassifies them."
     />
   ),
 
-  // 21: Building Block 7 \u2014 Orchestration
+  // 21: Building Block 7 -Orchestration
   () => (
     <DiagramSlide
-      title="Orchestration \u2014 Planning & Sequencing"
+      title="Orchestration: Planning & Sequencing"
       subtitle="Building Block 7"
       message="Without orchestration, you have automation. With it, you have agency."
     >
@@ -339,7 +339,7 @@ export const slides = [
     </DiagramSlide>
   ),
 
-  // 22: The Big Leap \u2014 title
+  // 22: The Big Leap -title
   () => (
     <SectionSlide
       sectionNumber=""
@@ -349,12 +349,12 @@ export const slides = [
     />
   ),
 
-  // 23: The Big Leap \u2014 diagram
+  // 23: The Big Leap -diagram
   () => (
     <DiagramSlide
       title="From Chatbots to Agents"
       subtitle="The Big Leap"
-      message="You\u2019re no longer the glue between prompts and outputs."
+      message="You're no longer the glue between prompts and outputs."
     >
       <ChatbotVsAgentDiagram />
     </DiagramSlide>
@@ -363,15 +363,15 @@ export const slides = [
   // 24: Theory complete
   () => (
     <SectionSlide
-      sectionNumber={'\u2713'}
+      sectionNumber={'✓'}
       title="Theory Complete"
-      subtitle="Now let\u2019s see it in action"
+      subtitle="Now let's see it in action"
       icon={'\u{1F6E0}\uFE0F'}
     />
   ),
 
   // ============================================================
-  // SECTION 4: PRACTICAL \u2014 AGENTS DOING REAL WORK (25-34)
+  // SECTION 4: PRACTICAL -AGENTS DOING REAL WORK (25-34)
   // ============================================================
 
   // 25: Section divider
@@ -384,19 +384,19 @@ export const slides = [
     />
   ),
 
-  // 26: Tech Stack \u2014 Why Claude (meme)
+  // 26: Tech Stack -Why Claude (meme)
   () => (
     <ImageSlide
       title="Why Claude?"
       subtitle="The Tech Stack"
       imageSrc="/image-005.png"
-      imageAlt="Distracted boyfriend meme \u2014 Claude vs ChatGPT"
-      caption="Better reasoning. Better coding. Better tool use. This is what we\u2019ll demo tonight."
+      imageAlt="Distracted boyfriend meme, Claude vs ChatGPT"
+      caption="Better reasoning. Better coding. Better tool use. This is what we'll demo tonight."
       overlay="bg-gradient-to-t from-black via-black/60 to-black/20"
     />
   ),
 
-  // 27: Demo 1 \u2014 Claude Code
+  // 27: Demo 1 -Claude Code
   () => (
     <DemoSlide
       title="Claude Code"
@@ -412,26 +412,26 @@ export const slides = [
     />
   ),
 
-  // 28: Claude Code \u2014 Key insight
+  // 28: Claude Code -Key insight
   () => (
     <QuoteSlide
-      quote="I didn\u2019t write the code. I wrote the intent. The agent figured out the rest."
+      quote="I didn't write the code. I wrote the intent. The agent figured out the rest."
       large
     />
   ),
 
-  // 29: Recursive Improvement \u2014 J-Curve
+  // 29: Recursive Improvement -J-Curve
   () => (
     <DiagramSlide
       title="The Recursive Leap"
       subtitle="Software building software"
-      message="We\u2019re on the steep part of the J-curve."
+      message="We're on the steep part of the J-curve."
     >
       <JCurveDiagram />
     </DiagramSlide>
   ),
 
-  // 30: Demo 2 \u2014 Claude Cowork
+  // 30: Demo 2 -Claude Cowork
   () => (
     <DemoSlide
       title="Claude Cowork"
@@ -442,7 +442,7 @@ export const slides = [
         'Agent plans its chain of thought and to-do list',
         'Builds, tests, and delivers the result',
       ]}
-      message="This presentation was built using the technique I\u2019m about to show you."
+      message="This presentation was built using the technique I'm about to show you."
     />
   ),
 
@@ -452,7 +452,7 @@ export const slides = [
       title="Meet JackalBot"
       subtitle="Personal AI Agent"
       imageSrc="/image-001.png"
-      imageAlt="Tony Stark \u2014 JARVIS workshop"
+      imageAlt="Tony Stark, JARVIS workshop"
       caption="What if you had your own JARVIS?"
       overlay="bg-gradient-to-t from-black via-black/60 to-black/20"
     />
@@ -463,7 +463,7 @@ export const slides = [
     <DiagramSlide
       title="How JackalBot Works"
       subtitle="Architecture"
-      message="Cloud-hosted on Digital Ocean \u2014 not on my local machine, for security."
+      message="Cloud-hosted on Digital Ocean, not on my local machine, for security."
     >
       <JackalBotDiagram />
     </DiagramSlide>
@@ -473,12 +473,12 @@ export const slides = [
   () => (
     <DemoSlide
       title="JackalBot Live"
-      subtitle="Let\u2019s see it in action"
+      subtitle="Let's see it in action"
       steps={[
         'Send a voice note to JackalBot via Discord',
         'Watch it transcribe and process the request',
         'It emails everyone in the room with the chosen task',
-        'All in real-time \u2014 no human glue required',
+        'All in real-time, no human glue required',
       ]}
       message="Discord is the interface for sending data back and forth to the server."
     />
@@ -511,9 +511,9 @@ export const slides = [
       subtitle="The Human Edge"
       accentWord="Instructors"
       bullets={[
-        { icon: '\u{1F5E3}\uFE0F', heading: 'Clear instruction', text: '\u2014 logical, specific direction (increasingly by voice)' },
-        { icon: '\u{1F4A1}', heading: 'Novel application', text: '\u2014 thinking of new uses for intelligence' },
-        { icon: '\u{1F3BC}', heading: 'Agent orchestration', text: '\u2014 becoming a true manager of AI agents' },
+        { icon: '\u{1F5E3}\uFE0F', heading: 'Clear instruction', text: 'Logical, specific direction (increasingly by voice)' },
+        { icon: '\u{1F4A1}', heading: 'Novel application', text: 'Thinking of new uses for intelligence' },
+        { icon: '\u{1F3BC}', heading: 'Agent orchestration', text: 'Becoming a true manager of AI agents' },
       ]}
       footnote="Your value shifts from execution to orchestration."
     />
@@ -532,7 +532,7 @@ export const slides = [
   // 37: Final Quote
   () => (
     <QuoteSlide
-      quote="Today is the worst AI will ever be. It\u2019s only going to get better from here."
+      quote="Today is the worst AI will ever be. It's only going to get better from here."
       large
     />
   ),

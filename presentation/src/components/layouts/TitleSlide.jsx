@@ -54,7 +54,7 @@ export default function TitleSlide({ title, subtitle, presenter, date, brandLine
       />
 
       {/* Content area with generous padding */}
-      <div className="relative z-10 flex flex-col items-center justify-center text-center" style={{ padding: '5vh 8vw' }}>
+      <div className="relative z-10 flex flex-col items-center justify-center text-center" style={{ padding: '4vh 4vw' }}>
         {/* Logo mark - pink gradient rounded square with circle inside */}
         <motion.div
           initial={{ scale: 0, rotate: -180 }}
@@ -97,7 +97,7 @@ export default function TitleSlide({ title, subtitle, presenter, date, brandLine
           className="tracking-tight text-center leading-tight mb-5"
           style={{
             fontFamily: 'Georgia, "Times New Roman", serif',
-            fontSize: '5rem',
+            fontSize: '6rem',
             fontWeight: 'normal',
             color: colors.text,
           }}
@@ -123,7 +123,7 @@ export default function TitleSlide({ title, subtitle, presenter, date, brandLine
             transition={{ delay: 0.5, duration: 0.8 }}
             className="mb-12"
             style={{
-              fontSize: '1.1rem',
+              fontSize: '1.3rem',
               color: colors.textSecondary,
               letterSpacing: '0.2em',
               textTransform: 'uppercase',

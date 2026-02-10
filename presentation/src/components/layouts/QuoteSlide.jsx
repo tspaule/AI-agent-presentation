@@ -23,7 +23,7 @@ export default function QuoteSlide({ quote, attribution, context, large }) {
       />
 
       {/* Content - centered with generous padding */}
-      <div className="relative z-10 flex flex-col items-center text-center" style={{ padding: '5vh 8vw', maxWidth: '1000px' }}>
+      <div className="relative z-10 flex flex-col items-center text-center" style={{ padding: '4vh 4vw', maxWidth: '1300px' }}>
         {/* Large decorative opening quote mark in gradient */}
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -51,7 +51,7 @@ export default function QuoteSlide({ quote, attribution, context, large }) {
           className="tracking-tight leading-relaxed mb-10"
           style={{
             fontFamily: 'Georgia, "Times New Roman", serif',
-            fontSize: large ? '3.5rem' : '2.5rem',
+            fontSize: large ? '4rem' : '3rem',
             color: colors.text,
             fontWeight: 'normal',
           }}
@@ -80,7 +80,7 @@ export default function QuoteSlide({ quote, attribution, context, large }) {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.5 }}
             style={{
-              fontSize: '1.3rem',
+              fontSize: '1.5rem',
               color: colors.brand,
               fontWeight: 600,
               fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',

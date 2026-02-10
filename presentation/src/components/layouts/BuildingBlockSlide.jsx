@@ -25,7 +25,7 @@ export default function BuildingBlockSlide({ number, icon, title, subtitle, keyI
       </div>
 
       {/* Content - CENTERED with generous padding */}
-      <div className="relative z-10 flex flex-col items-center w-full text-center" style={{ padding: '5vh 8vw', maxWidth: '1000px' }}>
+      <div className="relative z-10 flex flex-col items-center w-full text-center" style={{ padding: '4vh 4vw', maxWidth: '1300px' }}>
         {/* Section label - small uppercase */}
         <motion.div
           initial={{ opacity: 0, y: -10 }}
@@ -68,7 +68,7 @@ export default function BuildingBlockSlide({ number, icon, title, subtitle, keyI
           className="tracking-tight text-center leading-tight mb-3"
           style={{
             fontFamily: 'Georgia, "Times New Roman", serif',
-            fontSize: '3.5rem',
+            fontSize: '4rem',
             fontWeight: 'normal',
             color: colors.text,
           }}
@@ -84,7 +84,7 @@ export default function BuildingBlockSlide({ number, icon, title, subtitle, keyI
             transition={{ delay: 0.25, duration: 0.5 }}
             className="text-center mb-8"
             style={{
-              fontSize: '1.3rem',
+              fontSize: '1.5rem',
               color: colors.textSecondary,
               fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
               lineHeight: 1.6,
@@ -126,7 +126,7 @@ export default function BuildingBlockSlide({ number, icon, title, subtitle, keyI
             <span
               style={{
                 color: isDark ? 'rgba(255,255,255,0.8)' : 'rgba(0,0,0,0.75)',
-                fontSize: '1.3rem',
+                fontSize: '1.5rem',
                 lineHeight: 1.6,
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
               }}
@@ -160,7 +160,7 @@ export default function BuildingBlockSlide({ number, icon, title, subtitle, keyI
                 <span
                   style={{
                     color: colors.textSecondary,
-                    fontSize: '1.2rem',
+                    fontSize: '1.4rem',
                     lineHeight: 1.6,
                     fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
                   }}
@@ -204,7 +204,7 @@ export default function BuildingBlockSlide({ number, icon, title, subtitle, keyI
             <span
               style={{
                 color: colors.textSecondary,
-                fontSize: '1.15rem',
+                fontSize: '1.35rem',
                 fontStyle: 'italic',
                 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
               }}
